@@ -32,8 +32,4 @@ Pod::Spec.new do |s|
     ss.dependency 'UdeskSDK/SDK'
   end
 
-  s.pod_target_xcconfig = {
-    'GCC_SYMBOLS_PRIVATE_EXTERN'=>'YES',
-  }
-
 end
