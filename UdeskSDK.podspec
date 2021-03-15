@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.summary      = 'Udesk SDK for iOS'
   s.homepage     = 'https://github.com/udesk/UdeskSDK-iOS'
   s.author       = {'xuchen ' => 'xuc@udesk.cn'}
-  s.source       =  {:git => 'https://github.com/udesk/UdeskSDK-iOS.git', :tag => s.version.to_s }
+  s.source       =  {:git => 'https://github.com/jinyaoye23/UdeskSDK-iOS.git', :tag => s.version.to_s }
   s.platform     = :ios, '8.0'
   s.requires_arc = true
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
