@@ -302,6 +302,11 @@
         [_messageTableView setTableViewInsetsWithBottomValue:self.view.udHeight - _chatInputToolBar.udY];
     }
     
+    // add by stephen at 2021-03-05 配置右上角按钮
+    if (self.sdkConfig.customRightBarButtonItems) {
+        self.navigationItem.rightBarButtonItems = self.sdkConfig.customRightBarButtonItems;
+    }
+    
     // 设置整体背景颜色
     [self setBackgroundColor];
 }

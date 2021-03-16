@@ -203,6 +203,11 @@ typedef NS_ENUM(NSUInteger, UDQuitQueueType) {
 
 @property (nonatomic, strong) NSArray *udViewControllers;
 
+/** 自定义右上角按钮*/
+@property (nonatomic, strong) NSArray *customRightBarButtonItems;
+@property (nonatomic, strong) UIBarButtonItem * customBackBarButton;
+
+
 + (instancetype)customConfig;
 
 - (void)setConfigToDefault;
