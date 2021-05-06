@@ -284,6 +284,10 @@ static CGFloat udInputBarHeight = 54.0f;
     if (!isRobotSession) {
         self.navigationItem.rightBarButtonItems = nil;
     }
+    // add by stephen at 2021-03-05 配置右上角按钮
+    if (self.sdkConfig.customRightBarButtonItems) {
+        self.navigationItem.rightBarButtonItems = self.sdkConfig.customRightBarButtonItems;
+    }
 }
 
 //发送预知消息
@@ -350,6 +354,11 @@ static CGFloat udInputBarHeight = 54.0f;
     //配置自定义按钮
     _chatInputToolBar.enableSurvey = self.sdkSetting.enableImSurvey.boolValue;
     _chatInputToolBar.customButtonConfigs = self.sdkConfig.customButtons;
+    
+    // add by stephen at 2021-03-05 配置右上角按钮
+    if (self.sdkConfig.customRightBarButtonItems) {
+        self.navigationItem.rightBarButtonItems = self.sdkConfig.customRightBarButtonItems;
+    }
     
     _messageTableView.udHeight -= udIsIPhoneXSeries?34:0;
     [_messageTableView setTableViewInsetsWithBottomValue:self.view.udHeight - _chatInputToolBar.udY];

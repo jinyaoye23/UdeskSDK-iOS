@@ -333,6 +333,7 @@
     }
     
     self.messageManager.agentModel = agent;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"UD_GET_IMSUBSESSIONID" object:@{@"imSubSessionID": [NSNumber numberWithInteger:agent.imSubSessionId]}];
 }
 
 //更新客服状态
